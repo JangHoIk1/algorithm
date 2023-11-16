@@ -1,0 +1,16 @@
+def solution(array, commands):
+    answer = []
+
+    for i in range(len(commands)):
+        arr=[]
+        com_i = commands[i][0];
+        com_j = commands[i][1];
+
+        arr = array[com_i-1:com_j]
+
+
+        arr.sort()
+
+
+        answer.append(arr[commands[i][2]-1]);
+    return answer
